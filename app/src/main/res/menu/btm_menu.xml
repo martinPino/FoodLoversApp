@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:title="Home"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/ic_outline_home"
         android:id="@+id/homeFragment"/>
 
     <item android:title="Favorites"
@@ -10,7 +10,7 @@
         android:id="@+id/favoritesFragment"/>
 
     <item android:title="Categories"
-        android:icon="@drawable/ic_category"
+        android:icon="@drawable/ic_outline_category"
         android:id="@+id/categoriesFragment"/>
 
 </menu>

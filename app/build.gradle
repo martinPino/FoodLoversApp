@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.devtools.ksp'
+
 }
 
 android {
@@ -25,6 +27,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    ksp {
+        arg("room.schemaLocation", "$projectDir/schemas".toString())
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -64,7 +69,17 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.13.2'
 
     //videoModel mvvm
-    def lifecycle_version = "2.4.0-rc01"
+    def lifecycle_version = "2.6.0-alpha01"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+    //room
+    def roomVersion = "2.4.3"
+
+    implementation("androidx.room:room-runtime:$roomVersion")
+    ksp "androidx.room:room-compiler:$roomVersion"
+    implementation("androidx.room:room-ktx:$roomVersion")
+
+
 }

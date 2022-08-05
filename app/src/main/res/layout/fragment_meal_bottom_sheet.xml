@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.bottomsheet.MealBottomSheetFragment"
+    android:id="@+id/bottom_sheet">
+
+    <ImageView
+        android:id="@+id/img_bottom_sheet"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="5dp"
+        android:src="@color/accent"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_sheet_linear_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/img_bottom_sheet"
+        app:layout_constraintTop_toTopOf="@id/img_bottom_sheet"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/tv_bottom_sheet_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Argentina"
+            android:textColor="@color/g_black"
+            android:drawableStart="@drawable/ic_area"
+            android:drawableTint="@color/g_black"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_bottom_sheet_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asado"
+            android:textColor="@color/g_black"
+            android:drawableStart="@drawable/ic_category"
+            android:drawableTint="@color/g_black"
+            android:layout_weight="1"/>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bottom_sheet_meal_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="asdasdas asdasdas asdasd "
+        app:layout_constraintStart_toStartOf="@id/bottom_sheet_linear_layout"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_linear_layout"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/g_black"
+        android:fontFamily="@font/myfont"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/myfont"
+        android:text="Read more... "
+        android:textColor="@color/g_black"
+        app:layout_constraintBottom_toBottomOf="@+id/img_bottom_sheet"
+        app:layout_constraintStart_toStartOf="@id/bottom_sheet_meal_name"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_meal_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
