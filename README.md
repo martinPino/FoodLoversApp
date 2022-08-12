@@ -1,5 +1,5 @@
 # FoodLoversApp
-This is a simple food recipe app. 
+This is a simple food recipe app. You can search, save and view hundreds of international meal recipes with tutorials. 
 ## Short App preview:
 
 https://user-images.githubusercontent.com/98555585/183052654-29b31d92-64e5-4b7d-a1fc-b0ad1ec58e1a.mp4
